@@ -30,6 +30,7 @@ export default {
         .then(res => {
           if (res.data.code === 0) {
             window.localStorage.token = res.data.token;
+            window.location.href = "/home";
           } else {
             alert(res.data.msg);
           }
